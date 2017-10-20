@@ -25,7 +25,8 @@ export(basicProfile,
        fisherGOProfiles,
        contractedProfile,
        equivClust,
-       iterEquivClust
+       iterEquivClust,
+       equivClust2pdf
        )
              
 import( AnnotationDbi,

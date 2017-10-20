@@ -50,14 +50,12 @@ For each combination of the specified levels in the choosen GO ontologies,
 compute the equivalence threshold distance matrix and generate a dendrogram from it.
 }
 \examples{
-\dontrun{
 data(kidneyGeneLists)
 kidneyGeneLists
-genListsClusters <- iterEquivClust(kidneyGeneLists, ontoLevels = 2:3, ontos = c("BP", "CC"),
+genListsClusters <- iterEquivClust(kidneyGeneLists, ontoLevels = 2:3,
                                    jobName = "Kidney Gene Lists_Equivalence Clustering (complete)",
                                    ylab = "Equivalence threshold distance",
                                    orgPackage="org.Hs.eg.db", method = "complete")
 genListClusters[["BP"]][["Level 3"]]
 class(genListsClusters[["BP"]][["Level 3"]])
-}
 }

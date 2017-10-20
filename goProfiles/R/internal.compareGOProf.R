@@ -71,7 +71,7 @@ internal.compareGOProf <- function(pn, qm, pqn0, n, m, n0,
 # alternative:          a character string describing the alternative hypothesis (always
 #                       "true squared Euclidean distance between the contracted profiles is greater than zero").
 
-# References: citar papers en construcció
+# References: citar papers en construccio
 #
 # See Also:     internal.fitGOProf, simPQIntersect, simSeriesPQIntersect
 #

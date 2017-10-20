@@ -108,7 +108,7 @@ compareGOProfiles <- function(pn, qm=NULL, pqn0=NULL, n = ngenes(pn), m = ngenes
 #                       is declared if d.sup < d0
 # d0:                   the equivalence threshold for the squared Euclidean distance
 #
-# References: citar papers en construcció
+# References: citar papers en construccio
 #
 # See Also:     fitGOProfile, equivalentGOProfiles
 #

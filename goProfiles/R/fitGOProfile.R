@@ -79,7 +79,7 @@ function(pn, p0, n = ngenes(pn),
 # alternative:          a character string describing the alternative hypothesis (always
 #                       "true squared Euclidean distance between the contracted profiles is greater than zero").
 #
-# References: citar papers en construcció
+# References: citar papers en construccio
 #
 # See Also:     compareGOProfiles, simPnP0, simSeriesPnP0
 #
