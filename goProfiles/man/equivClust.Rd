@@ -59,6 +59,7 @@ Do not confuse the threshold distance matrix with the squared distances computed
 in each equivalence test.
 }
 \examples{
+\dontrun{
 data(kidneyGeneLists)
 clustMF2 <- equivClust(2, "MF", kidneyGeneLists, orgPackage="org.Hs.eg.db")
 plot(clustMF2)
@@ -68,4 +69,5 @@ plot(clustMF2,
 # With the same data, an UPGMA dendrogram:
 equivClust(2, "MF", kidneyGeneLists, method = "average",
 orgPackage="org.Hs.eg.db")
+}
 }

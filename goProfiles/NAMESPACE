@@ -53,3 +53,6 @@ S3method(fisherGOProfiles, BasicGOProfile)
 S3method(fisherGOProfiles, ExpandedGOProfile)
 
 S3method(contractedProfile, ExpandedGOProfile)
+
+S3method(equivClust2pdf,equivClust)
+S3method(equivClust2pdf,iterEquivClust)

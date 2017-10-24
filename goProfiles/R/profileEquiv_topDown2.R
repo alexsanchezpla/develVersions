@@ -149,6 +149,7 @@ getStats <- function(goObject)
 #' in each equivalence test.
 #' @importFrom stringr str_pad
 #' @examples
+#' \dontrun{
 #' data(kidneyGeneLists)
 #' clustMF2 <- equivClust(2, "MF", kidneyGeneLists, orgPackage="org.Hs.eg.db")
 #' plot(clustMF2)
@@ -158,6 +159,7 @@ getStats <- function(goObject)
 #' # With the same data, an UPGMA dendrogram:
 #' equivClust(2, "MF", kidneyGeneLists, method = "average",
 #' orgPackage="org.Hs.eg.db")
+#' }
 #' @export
 equivClust <- function(ontoLevel, onto, geneLists, 
                                trace = TRUE, onTheFlyDev = NULL, method = "complete", 
@@ -288,14 +290,16 @@ auxIter <- function(onto, ontoLevels, geneLists,
 #'   \code{length(ontoLevels)} with elements of class \code{equivClust}, standing for the cluster equivalence
 #'   analysis performed for each ontology and level analysed
 #' @examples
+#' \dontrun{
 #' data(kidneyGeneLists)
 #' kidneyGeneLists
 #' genListsClusters <- iterEquivClust(kidneyGeneLists, ontoLevels = 2:3,
 #'                                    jobName = "Kidney Gene Lists_Equivalence Clustering (complete)",
 #'                                    ylab = "Equivalence threshold distance",
 #'                                    orgPackage="org.Hs.eg.db", method = "complete")
-#' genListClusters[["BP"]][["Level 3"]]
+#' genListsClusters[["BP"]][["Level 3"]]
 #' class(genListsClusters[["BP"]][["Level 3"]])
+#' }
 
 #' @export
 iterEquivClust <- function(geneLists, ontos = c("BP","MF","CC"), ontoLevels = c(2,3), 
