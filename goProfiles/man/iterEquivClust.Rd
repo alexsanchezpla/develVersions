@@ -23,7 +23,8 @@ where the GO profiles are built}
 
 \item{onTheFlyDev}{character, name of the graphical device where to immediately display the resulting
 diagrams. The appropriate names depend on the operating system. Defaults to \code{NULL} and then
-nothing is displayed}
+nothing is displayed. Otherwise, successive graphical windows are opened and the successive diagrams
+are displayed in them}
 
 \item{method}{character, one of the admissible methods in function \code{hclust}. Defaults to "complete"}
 

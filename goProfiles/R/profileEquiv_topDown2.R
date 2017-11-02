@@ -222,7 +222,8 @@ equivClust <- function(ontoLevel, onto, geneLists,
   attr(clust, "allComps") <- allComps
   
   if (!is.null(onTheFlyDev)) {
-    dev.set(dev.list()[onTheFlyDev])
+    eval(call(onTheFlyDev, width = 20, height = 20))
+    # dev.set(dev.list()[onTheFlyDev])
     plot(clust, hang = -1, main = jobName, sub = subName, ylab = ylab)
   }
   
@@ -259,7 +260,7 @@ auxIter <- function(onto, ontoLevels, geneLists,
                    trace = trace, onTheFlyDev = onTheFlyDev, method = method,
                    jobName = jobName, ylab = ylab, alpha = alpha, precis = precis,
                    ...)
-  names(result) <- paste("Level", ontoLevels)
+  names(result) <- paste("Level", ontoLevels, sep = "")
   return(result)
 }
 
@@ -273,7 +274,8 @@ auxIter <- function(onto, ontoLevels, geneLists,
 #' @param trace boolean, the full process must be traced? Defaults to TRUE
 #' @param onTheFlyDev character, name of the graphical device where to immediately display the resulting
 #'   diagrams. The appropriate names depend on the operating system. Defaults to \code{NULL} and then
-#'   nothing is displayed
+#'   nothing is displayed. Otherwise, successive graphical windows are opened and the successive diagrams
+#'   are displayed in them
 #' @param method character, one of the admissible methods in function \code{hclust}. Defaults to "complete"
 #' @param jobName character, main plot name, defaults to "Equivalence clustering" 
 #' @param ylab character, label of the vertical axis of the plot, defaults to "Equivalence threshold distance"
@@ -309,9 +311,9 @@ iterEquivClust <- function(geneLists, ontos = c("BP","MF","CC"), ontoLevels = c(
                            alpha = 0.05, precis = 0.001,
                            ...)
 {
-  if (!is.null(onTheFlyDev)) {
-    eval(call(onTheFlyDev, 20,20))
-  }
+  # if (!is.null(onTheFlyDev)) {
+  #   eval(call(onTheFlyDev, 20,20))
+  # }
   result <- lapply(ontos, auxIter, ontoLevels = ontoLevels, geneLists = geneLists,
                    trace = trace, onTheFlyDev = onTheFlyDev, method = method, 
                    jobName = jobName, ylab = ylab, alpha = alpha, precis = precis,

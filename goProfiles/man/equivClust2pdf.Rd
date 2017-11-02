@@ -38,6 +38,6 @@ data(clustKidneyMF2)
 equivClust2pdf(clustKidneyMF2)
 # And then open file "Equivalence cluster_MF_2_complete.pdf"...
 equivClust2pdf(clustKidneyMF2, 
-               jobName = "Method 'complete' dendrogram for level 2 of GO ontology MF.pdf")
+               jobName = "Method 'complete' dendrogram for level 2 of GO ontology MF")
 # And then open file "Method 'complete' dendrogram for level 2 of GO ontology MF.pdf"...
 }
