@@ -1,10 +1,9 @@
 `expandedProfile` <-
 function(genelist, idType="Entrez", onto="ANY", level=2,orgPackage=NULL, anotPackage=NULL,    
   multilevels=NULL, ord=TRUE, na.rm=TRUE, percentage=TRUE){
-
-
 oneProfile<-function(GOTermsList, onto="ANY", level=2, multilevels=NULL,
                     ord=TRUE, na.rm=TRUE, percentage=TRUE){   
+    expProf<-NULL
     ancestorsList<-getAncestorsLst(GOTermsList,onto)
     if (!is.null(ancestorsList)){
       if (is.null(multilevels))
@@ -15,7 +14,7 @@ oneProfile<-function(GOTermsList, onto="ANY", level=2, multilevels=NULL,
      {errorMsg<-paste("No list of terms available for ",
      "Ontology: ",onto," and level: ",level,sep="")
      on.exit(cat(errorMsg))
-        expProf<-NULL}
+        }
     else{
         numCols <- length(ancestorsList) 
         numProfiles <- 0
