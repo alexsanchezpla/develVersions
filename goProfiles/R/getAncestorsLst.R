@@ -11,7 +11,8 @@ function (GOtermslist, onto, unique.ancestor=TRUE, na.rm=TRUE,
  }
 ### Check (and force)that GOterms lists is formed only be terms of "onto" ontology
  GOtermslist <-sapply(GOtermslist, 
-    function(l) l[ sapply(names(l), function(x) substr(x,1,2))==onto])
+    function(l) l[ sapply(names(l), function(x) substr(x,1,2))==onto],
+    simplify=FALSE)
 ### Create and fill ancestors list
  numAncestors <- length(GOtermslist)
  AncestorsLst <- vector("list", numAncestors)

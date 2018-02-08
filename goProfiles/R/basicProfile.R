@@ -9,7 +9,7 @@ oneProfile<-function(GOTermsList, onto, level=2, multilevels=NULL,
   ancestorsList <-getAncestorsLst(GOTermsList,onto) 
 
   if (!is.null(ancestorsList)){
-      ancestors<-unique(unlist(ancestorsList))
+      ancestors<-unlist(ancestorsList)
       if (is.null(multilevels))
         ontoLevel<- getGOLevel (onto,level)
       else
